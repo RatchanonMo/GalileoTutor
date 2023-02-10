@@ -1,0 +1,18 @@
+.try {
+  z-index: 99;
+  position: fixed;
+  font-weight: bold;
+  bottom: 50px;
+  right: 50px;
+  border: 1px solid #cdfb52;
+  padding: 15px;
+  color: #cdfb52;
+  border-radius: 100px;
+  transition: 0.3s;
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+}
+.try:hover {
+  background-color: #cdfb52;
+  color: #000;
+}

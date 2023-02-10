@@ -1,0 +1,129 @@
+html{
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: 'Line';
+  src: url('./fonts/LINESeedSansTH_XBd.ttf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'Line';
+  src: url('./fonts/LINESeedSansTH_He.ttf');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Line';
+  src: url('./fonts/LINESeedSansTH_Rg.ttf');
+  font-weight: normal;
+}
+*{
+  font-family: 'Line';
+}
+body{
+  /* background-color: #74a2d3; */
+  /* background-color: #c9acdc; */
+  background: rgb(165,85,236);
+  background: linear-gradient(180deg, rgba(165,85,236,1) 0%, rgba(208,156,250,1) 40%);
+}
+#section1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  /* background-image: url('./img/background.png');
+  background-size: contain;
+  background-repeat: no-repeat; */
+  color: #fff;
+  
+}
+#section2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 211.5vh;
+  background-image: url('./img/background-new.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: unset;
+
+}
+.section{
+  min-height: 90vh;
+  
+}
+
+.black{
+  font-weight: 900;
+}
+.bg-lime{
+  background-color: #cdfb52;
+}
+
+.subject{
+  background-color: rgb(237, 240, 243);
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  align-items: end;
+  justify-content: center;
+  display: flex;
+}
+.owl-stage-outer{
+  overflow: visible !important;
+}
+#section3{
+  background-color: #fff;
+}
+.successor{
+  max-width: 95%;
+}
+.college{
+  color:#abe114;
+}
+.tutorText{
+  padding: 20px;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.76);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 7px;
+  left:60px;
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
+}
+.tutorSubject{
+  padding: 2px 10px;
+  background-color: #abe114;
+  color: #fff;
+  display: inline-block;
+  border-radius: 100px;
+}
+.moreButton{
+  color: #fff;
+  display: inline-block;
+  border-radius: 100px;
+  display: flex;
+}
+#end{
+  justify-content: end;
+  margin-right: 10px;
+
+}
+.topNewsMockup{
+  width: 95%;
+  height: 400px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.newsMockup{
+  width: 100%;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.header{
+  font-size: 10vw;
+  line-height: 90%;
+}
