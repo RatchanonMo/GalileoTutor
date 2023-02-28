@@ -22,11 +22,12 @@ html{
 body{
   /* background-color: #74a2d3; */
   /* background-color: #c9acdc; */
-  background: rgb(165,85,236);
-  background: linear-gradient(180deg, rgba(165,85,236,1) 0%, rgba(208,156,250,1) 40%);
+  /* background: rgb(165,85,236);
+  background: linear-gradient(180deg, rgba(165,85,236,1) 0%, rgba(208,156,250,1) 40%); */
+  background-image: url('./img/paper.jpg');
+  background-attachment: fixed;
 }
 #section1{
-  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -72,6 +73,7 @@ body{
 .owl-stage-outer{
   overflow: visible !important;
 }
+
 #section3{
   background-color: #fff;
 }

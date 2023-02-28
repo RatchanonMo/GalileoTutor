@@ -5,12 +5,14 @@ import Try from "./component/Try";
 import $ from "jquery";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./App.css";
 import tutor1 from "./img/tutor1.png";
 import tutor2 from "./img/tutor2.png";
 import tutor3 from "./img/tutor3.png";
 import MoreButton from "./component/MoreButton";
-import title from './img/title.png'
+import title from "./img/title.png";
+import f1 from "./img/f1.jpg";
 
 export default class App extends Component {
   componentDidMount = () => {
@@ -25,7 +27,7 @@ export default class App extends Component {
         /* change color for each background-change */
         if (
           (elementPositionTop >= 3000 && elementPositionTop <= 4550) ||
-          elementPositionTop >= 5500 && elementPositionTop <= 6450
+          (elementPositionTop >= 5500 && elementPositionTop <= 6450)
         ) {
           $(this).addClass("blackText");
           $(this).addClass("blackDecorated");
@@ -41,7 +43,7 @@ export default class App extends Component {
         /* change color for each background-change */
         if (
           (elementPositionTop >= 3000 && elementPositionTop <= 4550) ||
-          elementPositionTop >= 5500 && elementPositionTop <= 6450
+          (elementPositionTop >= 5500 && elementPositionTop <= 6450)
         ) {
           $(this).addClass("blackBorder");
         } else {
@@ -56,7 +58,7 @@ export default class App extends Component {
         /* change color for each background-change */
         if (
           (elementPositionTop >= 3000 && elementPositionTop <= 4550) ||
-          elementPositionTop >= 5500 && elementPositionTop <= 6450
+          (elementPositionTop >= 5500 && elementPositionTop <= 6450)
         ) {
           $(this).addClass("blackText");
         } else {
@@ -70,7 +72,7 @@ export default class App extends Component {
         /* change color for each background-change */
         if (
           (elementPositionTop >= 3000 && elementPositionTop <= 4550) ||
-          elementPositionTop >= 5500 && elementPositionTop <= 6450
+          (elementPositionTop >= 5500 && elementPositionTop <= 6450)
         ) {
           $(this).addClass("blackText");
         } else {
@@ -119,12 +121,35 @@ export default class App extends Component {
     return (
       <>
         <Navbar />
-        <Sidebar />
         <Try />
-        {/* Banner */}
-        <div id="home">
-          <div id="section1">
-              <img src={title} style={{width:'50%'}} alt="" />
+        <div id="home" className="my-20">
+          <div >
+            <div>
+              <OwlCarousel
+                className="container overflow-hidden mx-auto owl-theme"
+                margin={80}
+                items={1}
+                stagePadding={70}
+                autoplay
+              >
+                <div>
+                  <img
+                    src={f1}
+                    className=""
+                    style={{ borderRadius: "20px" }}
+                  />
+                </div>
+                <div>
+                  <img
+                    src={f1}
+                    className=""
+                    style={{ borderRadius: "20px" }}
+                  />
+                </div>
+              </OwlCarousel>
+            </div>
+
+            {/* <img src={title} style={{width:'50%'}} alt="" /> */}
             {/* <div >
               <h1 className="black header ">
                 กาลิเลโอ
@@ -137,9 +162,9 @@ export default class App extends Component {
             </div> */}
           </div>
         </div>
-        <div id="section2">
+        {/* <div id="section2">
           <div></div>
-        </div>
+        </div> */}
         {/* Introduce */}
         <main className="overflow-hidden " id="section3">
           <div className="grid grid-cols-2 max-w-screen-lg m-auto py-20 ">
@@ -229,7 +254,7 @@ export default class App extends Component {
                 autoplay
               >
                 <div className="relative">
-                  <img src={tutor1}  alt="" />
+                  <img src={tutor1} alt="" />
                   <div className="tutorText  max-w-xs">
                     <p className="tutorSubject text-sm my-1">ฟิสิกส์</p>
 

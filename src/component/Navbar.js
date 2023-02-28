@@ -1,13 +1,14 @@
 import React from "react";
 import "./Navbar.css";
 import {  FaFacebook, FaInstagram, FaLine } from "react-icons/fa";
+import logo from '../img/small.png';
 
 const item = [
   { name: "Home", href: "/", status: "current" },
   { name: "Our course", href: "/", status: "normal" },
   { name: "About us", href: "/", status: "normal" },
   { name: "Blog", href: "/", status: "dis" },
-  { name: "Student Tour", href: "/", status: "dis" },
+  { name: "Student Tool", href: "/", status: "dis" },
   { name: "Contact us", href: "/", status: "dis" },
 ];
 
@@ -16,9 +17,9 @@ export default function Navbar() {
   return (
     <div>
       <nav id="bg">
-        <div>
-          {/* <img src={logo} width="80%" alt="" /> */}
-          <h1 className="logo">กาลิเลโอ<br/>ติวเตอร์.</h1>
+        <div >
+          <img src={logo}  />
+          {/* <h1 className="logo">กาลิเลโอ<br/>ติวเตอร์.</h1> */}
         </div>
         <div>
           {item.map((item) => (

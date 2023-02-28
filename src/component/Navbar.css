@@ -9,7 +9,6 @@ nav{
   position: fixed;
   padding: 45px;
   font-weight: bold;
-  color: #fff;
   backdrop-filter: blur( 3px );
   -webkit-backdrop-filter: blur( 3px );
 
@@ -31,8 +30,8 @@ nav img {
 }
 
 .current{
-  color: #000;
-  background-color: #cdfb52;
+  color: #fff;
+  background-color: #a555ec;
   padding: 2px 9px;
   border-radius: 100px;
 }
