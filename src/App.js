@@ -19,8 +19,11 @@ import krumean from "./img/krumean.png";
 import krumean_info from "./img/krumean_info.jpg";
 import krubig from "./img/krubig.png";
 import krubig_info from "./img/krubig_info.jpg";
+import krupee from "./img/krupee.png";
+import krupee_info from "./img/krupee_info.jpg";
+import kruterm from "./img/kruterm.png";
+import kruterm_info from "./img/kruterm_info.jpg";
 
-import React from "react";
 
 export default function App() {
   const student = [
@@ -63,11 +66,15 @@ export default function App() {
   let [isOpenKit, setIsOpenKit] = useState(false);
   let [isOpenMean, setIsOpenMean] = useState(false);
   let [isOpenBig, setIsOpenBig] = useState(false);
+  let [isOpenPee, setIsOpenPee] = useState(false);
+  let [isOpenTerm, setIsOpenTerm] = useState(false);
 
   function closeModal() {
     setIsOpenKit(false);
     setIsOpenMean(false);
     setIsOpenBig(false);
+    setIsOpenPee(false);
+    setIsOpenTerm(false);
   }
 
   function openModalKit() {
@@ -79,6 +86,13 @@ export default function App() {
   }
   function openModalBig() {
     setIsOpenBig(true);
+  }
+
+  function openModalPee() {
+    setIsOpenPee(true);
+  }
+  function openModalTerm() {
+    setIsOpenTerm(true);
   }
 
   return (
@@ -204,9 +218,50 @@ export default function App() {
               className="overflow-hidden alltutor"
               margin={10}
               items={1}
-              dots={false}
+              // dots={false}
+              
               autoplay
             >
+              <div className="relative">
+                <img src={kruterm} alt="" />
+                <div className="tutorText  max-w-xs">
+                  <p className="tutorSubject text-sm my-1">ฟิสิกส์และเคมี</p>
+
+                  <h1 className="text-2xl font-bold">ครูเติม</h1>
+                  <p>
+                    ฟาสต์ฟู้ดโปรเจกต์ป๊อปมุมมอง ฟอยล์อินเตอร์ผลักดัน ซีรีส์
+                    เอเซียสะบึมส์อพาร์ทเมนต์พ่อค้าพาสตา
+                  </p>
+                  <div className="moreButton">
+                    <button
+                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white"
+                      onClick={openModalTerm}
+                    >
+                      รู้จักกับคุณครู
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="relative">
+                <img src={krupee} alt="" />
+                <div className="tutorText  max-w-xs">
+                  <p className="tutorSubject text-sm my-1">คณิตศาสตร์</p>
+
+                  <h1 className="text-2xl font-bold">ครูพี</h1>
+                  <p>
+                    ฟาสต์ฟู้ดโปรเจกต์ป๊อปมุมมอง ฟอยล์อินเตอร์ผลักดัน ซีรีส์
+                    เอเซียสะบึมส์อพาร์ทเมนต์พ่อค้าพาสตา
+                  </p>
+                  <div className="moreButton">
+                    <button
+                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white"
+                      onClick={openModalPee}
+                    >
+                      รู้จักกับคุณครู
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div className="relative">
                 <img src={krubig} alt="" />
                 <div className="tutorText  max-w-xs">
@@ -271,6 +326,86 @@ export default function App() {
       </main>
 
       {/* Dirty Code. Pls Come Back Later. */}
+      <Transition appear show={isOpenTerm} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-screen-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <a
+                    className="float-right text-2xl cursor-pointer"
+                    onClick={closeModal}
+                  >
+                    &times;
+                  </a>
+                  <img src={kruterm_info} alt="" />
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+
+      <Transition appear show={isOpenPee} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <Dialog.Panel className="w-full max-w-screen-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  <a
+                    className="float-right text-2xl cursor-pointer"
+                    onClick={closeModal}
+                  >
+                    &times;
+                  </a>
+                  <img src={krupee_info} alt="" />
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+
       <Transition appear show={isOpenBig} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
