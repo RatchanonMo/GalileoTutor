@@ -81,7 +81,7 @@ body{
   max-width: 95%;
 }
 .college{
-  color:#abe114;
+  color:rgb(165,85,236);
 }
 .tutorText{
   padding: 20px;
@@ -96,7 +96,7 @@ body{
 }
 .tutorSubject{
   padding: 2px 10px;
-  background-color: #abe114;
+  background-color: rgb(165,85,236);
   color: #fff;
   display: inline-block;
   border-radius: 100px;
