@@ -8,7 +8,6 @@ nav{
   background: none;
   position: fixed;
   padding: 45px;
-  font-weight: bold;
   backdrop-filter: blur( 3px );
   -webkit-backdrop-filter: blur( 3px );
 
@@ -34,6 +33,8 @@ nav img {
   background-color: #a555ec;
   padding: 2px 9px;
   border-radius: 100px;
+  font-weight: bold;
+
 }
 .dis{
   opacity: 0.5;
