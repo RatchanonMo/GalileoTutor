@@ -134,6 +134,8 @@ export default function App() {
       {/* <div id="section2">
           <div></div>
         </div> */}
+
+
       {/* Introduce */}
       <main className="overflow-hidden " id="section3">
         <div className="grid grid-cols-2 max-w-screen-lg m-auto py-20 ">
@@ -254,7 +256,7 @@ export default function App() {
                   </p>
                   <div className="moreButton">
                     <button
-                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white"
+                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white ease-in duration-100"
                       onClick={openModalPee}
                     >
                       รู้จักกับคุณครู
@@ -274,7 +276,7 @@ export default function App() {
                   </p>
                   <div className="moreButton">
                     <button
-                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white"
+                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white ease-in duration-100"
                       onClick={openModalBig}
                     >
                       รู้จักกับคุณครู
@@ -293,7 +295,7 @@ export default function App() {
                   </p>
                   <div className="moreButton">
                     <button
-                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white"
+                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white ease-in duration-100"
                       onClick={openModalMean}
                     >
                       รู้จักกับคุณครู
@@ -312,7 +314,7 @@ export default function App() {
                   </p>
                   <div className="moreButton">
                     <button
-                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white"
+                      className="border border-black px-4 text-black rounded-full mt-2 hover:bg-black hover:text-white ease-in duration-100"
                       onClick={openModalKit}
                     >
                       รู้จักกับคุณครู
