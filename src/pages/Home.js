@@ -23,7 +23,8 @@ import krupee from "../img/krupee.png";
 import krupee_info from "../img/krupee_info.jpg";
 import kruterm from "../img/kruterm.png";
 import kruterm_info from "../img/kruterm_info.jpg";
-
+import Footer from "../component/Footer";
+import { GrLinkNext } from "react-icons/gr";
 
 export default function App() {
   const student = [
@@ -135,7 +136,6 @@ export default function App() {
           <div></div>
         </div> */}
 
-
       {/* Introduce */}
       <main className="overflow-hidden " id="section3">
         <div className="grid grid-cols-2 max-w-screen-lg m-auto py-20 ">
@@ -171,13 +171,22 @@ export default function App() {
 
         {/* Course */}
 
-        <div className="max-w-7xl m-auto py-20  " id="course">
+        <div className="max-w-7xl m-auto py-20" id="course">
           <p className="py-2 px-3 border border-black rounded-full inline">
             คอร์สเรียนทั้งหมด
           </p>
           <h1 className="text-9xl black my-4">OUR COURSES</h1>
 
-          <OwlCarousel margin={10} nav dots={false}>
+          <OwlCarousel
+            margin={10}
+            nav
+            dots={false}
+            navText={[
+              "",
+              '<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"  height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#fff" stroke-width="2" d="M2,12 L22,12 M13,3 L22,12 L13,21"></path></svg>',
+            ]}
+            className="course"
+          >
             <div class="subject p-20">
               <div>
                 <h1 className="font-bold text-4xl ">MATH</h1>
@@ -221,7 +230,7 @@ export default function App() {
               margin={10}
               items={1}
               // dots={false}
-              
+
               autoplay
             >
               <div className="relative">
@@ -329,7 +338,7 @@ export default function App() {
 
       {/* Dirty Code. Pls Come Back Later. */}
       <Transition appear show={isOpenTerm} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-10 " onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -342,7 +351,7 @@ export default function App() {
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 overflow-y-auto mt-20">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -382,7 +391,7 @@ export default function App() {
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 overflow-y-auto mt-20">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -422,7 +431,7 @@ export default function App() {
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 overflow-y-auto mt-20">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -462,7 +471,7 @@ export default function App() {
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 overflow-y-auto mt-20">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -502,7 +511,7 @@ export default function App() {
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 overflow-y-auto mt-20">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -555,14 +564,14 @@ export default function App() {
 
       {/* Blog & News */}
 
-      <main className="text-white" id="blog">
+      <main className="bg-white" id="blog">
         <div className=" max-w-screen-lg m-auto py-20  text-center">
-          <p className="py-2 px-3 border border-white rounded-full inline">
+          <p className="py-2 px-3 border border-black rounded-full inline">
             บทความและข่าวสาร
           </p>
           <h1 className="text-9xl black my-4 text-center">Blog & News</h1>
           <div className="grid grid-cols-2 gap-4 my-12 text-left">
-            <div className="border border-white">
+            <div className="border border-black">
               <div className="topNewsMockup m-auto mt-3"></div>
               <div className="p-10 ">
                 <p className="tutorSubject text-sm my-1">ข่าวสาร</p>
@@ -573,7 +582,7 @@ export default function App() {
                   ฟาสต์ฟู้ดโปรเจกต์ป๊อปมุมมอง ฟอยล์อินเตอร์ผลักดัน ซีรีส์
                   เอเซียสะบึมส์อพาร์ทเมนต์พ่อค้าพาสตา
                 </p>
-                <p className="text-gray-300 mt-4">
+                <p className="text-gray-600 mt-4">
                   อัปเดตเมื่อวันที่ 9/2/2023 เวลา 14.09 น.
                 </p>
               </div>
@@ -589,7 +598,7 @@ export default function App() {
                     ประกาศเพิ่มเติมคอร์สในรายวิชาเคมี
                   </h1>
 
-                  <p className="text-gray-300 mt-4">9/2/2023</p>
+                  <p className="text-gray-600 mt-4">9/2/2023</p>
                 </div>
               </div>
               <div className="grid grid-cols-2 p-3">
@@ -602,7 +611,7 @@ export default function App() {
                     ประกาศเพิ่มเติมคอร์สในรายวิชาเคมี
                   </h1>
 
-                  <p className="text-gray-300 mt-4">9/2/2023</p>
+                  <p className="text-gray-600 mt-4">9/2/2023</p>
                 </div>
               </div>
               <div className="grid grid-cols-2 p-3">
@@ -615,13 +624,14 @@ export default function App() {
                     ประกาศเพิ่มเติมคอร์สในรายวิชาเคมี
                   </h1>
 
-                  <p className="text-gray-300 mt-4">9/2/2023</p>
+                  <p className="text-gray-600 mt-4">9/2/2023</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

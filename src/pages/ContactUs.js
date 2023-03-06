@@ -3,6 +3,7 @@ import Navbar from "../component/Navbar";
 import { MdLocationPin } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaFacebook, FaInstagram, FaLine } from "react-icons/fa";
+import Footer from "../component/Footer";
 
 export default function ContactUs() {
   return (
@@ -42,15 +43,18 @@ export default function ContactUs() {
                   Bang Phueng, Phra Pradaeng, Samut Prakan 10130
                 </h3>
               </div>
-              <h3>
-                <a className="text-blue-500" href="tel:0817842186">
-                  &nbsp; 081-7842186
-                </a>
-                ,
-                <a className="text-blue-500" href="tel:0847720046">
-                  &nbsp; 084-7720046
-                </a>
-              </h3>
+              <div className="flex">
+            <span>ติดต่อ</span>
+            <div className="flex flex-col">
+              <a className="text-blue-500" href="tel:0817842186">
+                &nbsp; 081-7842186
+              </a>
+
+              <a className="text-blue-500" href="tel:0847720046">
+                &nbsp; 084-7720046
+              </a>
+            </div>
+          </div>
 
               <h3 className="my-2">
                 <FaFacebook className="inline text-xl text-blue-600" />
@@ -96,6 +100,7 @@ export default function ContactUs() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
