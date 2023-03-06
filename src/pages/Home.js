@@ -229,7 +229,6 @@ export default function App() {
               className="overflow-hidden alltutor"
               margin={10}
               items={1}
-              // dots={false}
 
               autoplay
             >

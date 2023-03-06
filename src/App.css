@@ -1,6 +1,7 @@
 html{
   scroll-behavior: smooth;
 }
+
 @font-face {
   font-family: 'Line';
   src: url('./fonts/LINESeedSansTH_XBd.ttf');

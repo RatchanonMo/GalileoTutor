@@ -10,7 +10,7 @@ export default function ContactUs() {
     <div>
       <Navbar current="/contact-us" />
       <div className="text-center mt-32 ">
-        <h1 className="black header  ">Contact Us</h1>
+        <h1 className="black text-9xl  ">Contact Us</h1>
         <p className="text-xl">ช่องทางการติดต่อเรา</p>
       </div>
       <div

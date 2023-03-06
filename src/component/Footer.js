@@ -19,9 +19,12 @@ export default function Footer() {
       <div className="absolute w-full">
       <div className="p-12 " style={{ background: "#e4e8eb"}}>
         <div className="container mx-auto">
+
+          <div className="grid grid-cols-4 gap-10">
+            <div>
           <img src="./img/logo.png" alt="" />
 
-          <div className="grid grid-cols-3 gap-4">
+            </div>
             <div>
               <div className="my-4">
                 <h1 className="text-xl font-bold my-2">
