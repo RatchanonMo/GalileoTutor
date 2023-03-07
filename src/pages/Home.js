@@ -24,7 +24,7 @@ import krupee_info from "../img/krupee_info.jpg";
 import kruterm from "../img/kruterm.png";
 import kruterm_info from "../img/kruterm_info.jpg";
 import Footer from "../component/Footer";
-import { GrLinkNext } from "react-icons/gr";
+import Drift from "react-driftjs";
 
 export default function App() {
   const student = [
@@ -630,6 +630,7 @@ export default function App() {
           </div>
         </div>
       </main>
+      <Drift appId="fzxz67paxw42" />
       <Footer />
     </div>
   );
