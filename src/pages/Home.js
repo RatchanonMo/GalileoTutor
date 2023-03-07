@@ -24,7 +24,7 @@ import krupee_info from "../img/krupee_info.jpg";
 import kruterm from "../img/kruterm.png";
 import kruterm_info from "../img/kruterm_info.jpg";
 import Footer from "../component/Footer";
-import Drift from "react-driftjs";
+import { LiveChatLoaderProvider, Drift } from "react-live-chat-loader";
 
 export default function App() {
   const student = [
@@ -99,7 +99,9 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <Try />
+      <LiveChatLoaderProvider providerKey="fzxz67paxw42" provider="drift">
+        <Drift />
+      </LiveChatLoaderProvider>
       <div id="home" className="my-20">
         <div>
           <div>
@@ -229,7 +231,6 @@ export default function App() {
               className="overflow-hidden alltutor"
               margin={10}
               items={1}
-
               autoplay
             >
               <div className="relative">
@@ -630,7 +631,7 @@ export default function App() {
           </div>
         </div>
       </main>
-      <Drift appId="fzxz67paxw42" />
+
       <Footer />
     </div>
   );
