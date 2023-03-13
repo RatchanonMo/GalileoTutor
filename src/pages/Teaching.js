@@ -3,6 +3,8 @@ import Navbar from "../component/Navbar";
 
 import Footer from "../component/Footer";
 import YoutubeEmbed from "../component/YoutubeEmbed";
+import { LiveChatLoaderProvider, Drift } from "react-live-chat-loader";
+
 
 export default function Teaching() {
   const clip = [
@@ -48,6 +50,9 @@ export default function Teaching() {
   return (
     <div>
       <Navbar current="/contact-us" />
+      <LiveChatLoaderProvider providerKey="fzxz67paxw42" provider="drift">
+        <Drift />
+      </LiveChatLoaderProvider>
       <div className="text-center mt-32 ">
         <p className="py-2 px-3 border border-black rounded-full inline">
           ตัวอย่างวิดีโอการเรียนการสอน
@@ -63,13 +68,14 @@ export default function Teaching() {
         className="container mx-auto bg-white my-4 py-20 drop-shadow-md "
         style={{ borderRadius: "20px" }}
       >
-        <div className="px-10">
+        <div className="px-20">
           {clip.map((item) => (
-            <div className="mb-10">
-              <h2 className="font-bold text-2xl">
+            <div className="mb-20">
+              <h2 className="font-bold text-3xl">
                 ตัวอย่างการสอนของ
                 <span style={{ color: "#a555ec" }}>{item.name}</span>
               </h2>
+              <hr className="my-5" />
               <div className="grid grid-cols-3 gap-5 mt-3">
                 <div>
                   <YoutubeEmbed embedId={item.embedId1} autoplay="0" />

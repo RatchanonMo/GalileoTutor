@@ -12,6 +12,8 @@ import {
   BsTagsFill,
 } from "react-icons/bs";
 import { FaFileDownload } from "react-icons/fa";
+import { LiveChatLoaderProvider, Drift } from "react-live-chat-loader";
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -453,6 +455,9 @@ export default function StudentTools() {
   return (
     <div>
       <Navbar current="/contact-us" />
+      <LiveChatLoaderProvider providerKey="fzxz67paxw42" provider="drift">
+        <Drift />
+      </LiveChatLoaderProvider>
       <div className="text-center mt-32 ">
         <p className=" py-2 px-3 border border-black rounded-full inline">
           เครื่องมือช่วยเรียน สำหรับน้องๆ

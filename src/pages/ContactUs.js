@@ -4,11 +4,15 @@ import { MdLocationPin } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaFacebook, FaInstagram, FaLine } from "react-icons/fa";
 import Footer from "../component/Footer";
+import { LiveChatLoaderProvider, Drift } from "react-live-chat-loader";
 
 export default function ContactUs() {
   return (
     <div>
       <Navbar current="/contact-us" />
+      <LiveChatLoaderProvider providerKey="fzxz67paxw42" provider="drift">
+        <Drift />
+      </LiveChatLoaderProvider>w
       <div className="text-center mt-32 ">
       <p className=" py-2 px-3 border border-black rounded-full inline">
       ช่องทางการติดต่อพวกเรา
