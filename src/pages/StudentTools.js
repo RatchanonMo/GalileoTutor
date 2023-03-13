@@ -2,8 +2,16 @@ import { Fragment, useState } from "react";
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import { Dialog, Transition, Tab, Disclosure } from "@headlessui/react";
-import { FaChevronUp } from "react-icons/fa";
-import { IoDocumentText } from "react-icons/io5";
+import { AiFillBank, AiFillTags } from "react-icons/ai";
+import {
+  BsBank2,
+  BsBookmarkDashFill,
+  BsDownload,
+  BsFillCalendarEventFill,
+  BsFillGridFill,
+  BsTagsFill,
+} from "react-icons/bs";
+import { FaFileDownload } from "react-icons/fa";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -19,65 +27,425 @@ export default function StudentTools() {
   function openModalPastPaper() {
     setIsOpenPastPaper(true);
   }
-
   let [categories] = useState({
-    CIE: [
+    IGCSE: [
       {
-        id: 1,
-        title: "ภาษาอังกฤษ (English)",
-        date: "ปี 2023",
-        type: "CIE",
+        Chemistry: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [
+                      {
+                        name: "IGCSE_CHEM_CIE_1_2022"
+                      },
+                      {
+                        name: "IGCSE_CHEM_CIE_1_2022(1)"
+                      },
+                    ],
+                  },
+                  {
+                    2021: [
+                      {
+                        name: "IGCSE_CHEM_CIE_1_2021"
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                2: [
+                  {
+                    2022: [
+                      {
+                        name: "IGCSE_CHEM_CIE_2_2022"
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                3: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        id: 2,
-        title: "ฟิสิกส์ (Physics)",
-        date: "ปี 2023",
-        type: "CIE",
+        Math: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+              {
+                2: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+              {
+                3: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        id: 3,
-        title: "เคมี (Chem)",
-        date: "ปี 2023",
-        type: "CIE",
+        "Fur Math": [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        id: 4,
-        title: "ชีวะ (Biology)",
-        date: "ปี 2023",
-        type: "CIE",
+        Economic: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+              {
+                2: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+              {
+                3: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        id: 5,
-        title: "คณิตศาสตร์ (Math)",
-        date: "ปี 2023",
-        type: "CIE",
+        Biology: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        Physics: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        "ENG-SL": [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
     ],
-    Erexel: [
+    "A-LEVEL": [
       {
-        id: 1,
-        title: "ภาษาอังกฤษ (English)",
-        date: "ปี 2023",
+        Biology: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+              {
+                "U.2": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+              {
+                "U.3": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        id: 2,
-        title: "ฟิสิกส์ (Physics)",
-        date: "ปี 2023",
+        Chemistry: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+              {
+                2: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+              {
+                3: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                  {
+                    "U.2": [
+                      {
+                        name: "1",
+                        link: "",
+                      },
+                    ],
+                  },
+                  {
+                    "U.3": [
+                      {
+                        name: "1",
+                        link: "",
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        id: 3,
-        title: "เคมี (Chem)",
-        date: "ปี 2023",
+        Physics: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        id: 4,
-        title: "ชีวะ (Biology)",
-        date: "ปี 2023",
+        Math: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
       {
-        id: 5,
-        title: "คณิตศาสตร์ (Math)",
-        date: "ปี 2023",
+        Economic: [
+          {
+            CIE: [
+              {
+                1: [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    IAL: [
+      {
+        Biology: [
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        Chemistry: [
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        Physics: [
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        Math: [
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        Economic: [
+          {
+            Edexcel: [
+              {
+                "U.1": [
+                  {
+                    2022: [],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
       },
     ],
   });
@@ -86,8 +454,10 @@ export default function StudentTools() {
     <div>
       <Navbar current="/contact-us" />
       <div className="text-center mt-32 ">
+        <p className=" py-2 px-3 border border-black rounded-full inline">
+          เครื่องมือช่วยเรียน สำหรับน้องๆ
+        </p>
         <h1 className="black text-9xl   ">Student Tools</h1>
-        <p className="text-xl">เครื่องมือช่วยเรียน สำหรับน้องๆ </p>
       </div>
       <div
         className="container mx-auto bg-white my-10 py-20 drop-shadow-md "
@@ -95,14 +465,12 @@ export default function StudentTools() {
       >
         <div className="px-40 grid grid-cols-3 gap-12">
           <div
-            className="p-14 bg-slate-100 rounded text-center ease-in duration-200 cursor-pointer hover:scale-110 "
+            className="p-14 bg-slate-100 rounded text-center ease-in duration-200 cursor-pointer hover:scale-110 hover:bg-purple-500 hover:text-white "
             onClick={openModalPastPaper}
           >
             <img src="./img/exam.png" className="mb-8" alt="" />
-            <p className=" px-3 border border-black rounded-full inline">
-              ข้อสอบเก่า
-            </p>
-            <h3 className="text-2xl font-bold">Past Paper</h3>
+            <p className=" px-3 border  rounded-full inline">ข้อสอบเก่า</p>
+            <h3 className="mt-2 text-2xl font-bold">Past Paper</h3>
           </div>
         </div>
       </div>
@@ -140,70 +508,294 @@ export default function StudentTools() {
                     &times;
                   </a>
                   <div className="px-10">
-                    <Tab.Group>
-                      <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
-                        {Object.keys(categories).map((category) => (
-                          <Tab
-                            key={category}
-                            className={({ selected }) =>
-                              classNames(
-                                "w-full rounded-lg py-2.5 text-sm font-bold leading-5 text-blue-700",
-                                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
-                                selected
-                                  ? "bg-white shadow"
-                                  : "text-slate-400 hover:bg-white/[0.12] hover:text-white"
-                              )
-                            }
-                          >
-                            {category}
-                          </Tab>
-                        ))}
-                      </Tab.List>
-                      <Tab.Panels className="mt-2">
-                        {Object.values(categories).map((posts, idx) => (
-                          <Tab.Panel
-                            key={idx}
-                            className={classNames(
-                              "rounded-xl bg-white p-3",
-                              "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
-                            )}
-                          >
-                            <ul>
-                              {posts.map((post) => (
-                                <li
-                                  key={post.id}
-                                  className="relative rounded-md p-3 hover:bg-gray-100 flex"
-                                >
-                                  <span className="text-4xl font-medium leading-5">
-                                    {post.type == "CIE" ? (
-                                      <IoDocumentText className="inline fill-purple-400" />
-                                    ) : (
-                                      <IoDocumentText className="inline fill-green-400" />
-                                    )}
-                                  </span>
-                                  <div className="flex-column ml-2">
-                                    <h3 className="text-xl">{post.title}</h3>
+                    <div className="grid grid-cols-6">
+                      <div className="">
+                        <h1 className="text-xl py-3 mb-1 ">
+                          <BsBank2 className="inline text-2xl" />
+                          &nbsp; Exam
+                        </h1>
+                        <h1 className="text-xl py-3 mb-1 ">
+                          <BsBookmarkDashFill className="inline text-2xl" />
+                          &nbsp; Subject
+                        </h1>
+                        <h1 className="text-xl py-3 mb-1 ">
+                          <BsTagsFill className="inline text-2xl" />
+                          &nbsp; Board
+                        </h1>
+                        <h1 className="text-xl py-3 mb-1 ">
+                          <BsFillGridFill className="inline text-2xl" />
+                          &nbsp; Paper / Unit
+                        </h1>
+                        <h1 className="text-xl py-3 mb-1 ">
+                          <BsFillCalendarEventFill className="inline text-2xl" />
+                          &nbsp; Year
+                        </h1>
+                      </div>
+                      <div className="col-span-5">
+                        <Tab.Group>
+                          <Tab.List className="flex space-x-1 rounded-xl bg-blue-900/20 p-1">
+                            {Object.keys(categories).map((category) => (
+                              <Tab
+                                key={category}
+                                className={({ selected }) =>
+                                  classNames(
+                                    "w-full rounded-lg py-2.5 text-sm font-bold leading-5 text-blue-700",
+                                    "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
+                                    selected
+                                      ? "bg-white shadow"
+                                      : "text-slate-400 hover:bg-white/[0.12] hover:text-white"
+                                  )
+                                }
+                              >
+                                {category}
+                              </Tab>
+                            ))}
+                          </Tab.List>
+                          <Tab.Panels className="mt-2">
+                            {/* Subjects */}
+                            {Object.values(categories).map((subjects, idx) => (
+                              <Tab.Panel key={idx}>
+                                <Tab.Group>
+                                  <Tab.List className="flex space-x-1  rounded-xl bg-blue-900/20 p-1">
+                                    {subjects.map((subject) => (
+                                      <>
+                                        {Object.keys(subject).map((subject) => (
+                                          <Tab
+                                            key={subject}
+                                            className={({ selected }) =>
+                                              classNames(
+                                                "w-full rounded-lg py-2.5 text-sm font-bold leading-5 text-blue-700",
+                                                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
+                                                selected
+                                                  ? "bg-white shadow"
+                                                  : "text-slate-400 hover:bg-white/[0.12] hover:text-white"
+                                              )
+                                            }
+                                          >
+                                            {subject}
+                                          </Tab>
+                                        ))}
+                                      </>
+                                    ))}
+                                  </Tab.List>
+                                  <Tab.Panels className="mt-2">
+                                    {/* Board */}
 
-                                    <ul className="mt-1  space-x-1 text-md font-normal leading-4 text-gray-500 ">
-                                      <li> &middot; {post.date}</li>
-                                    </ul>
-                                  </div>
+                                    {subjects.map((subject) => (
+                                      <>
+                                        {Object.values(subject).map(
+                                          (boards, idx) => (
+                                            <Tab.Panel key={idx}>
+                                              <Tab.Group>
+                                                <Tab.List className="flex space-x-1  rounded-xl bg-blue-900/20 p-1">
+                                                  {boards.map((board) => (
+                                                    <>
+                                                      {Object.keys(board).map(
+                                                        (board) => (
+                                                          <Tab
+                                                            key={board}
+                                                            className={({
+                                                              selected,
+                                                            }) =>
+                                                              classNames(
+                                                                "w-full rounded-lg py-2.5 text-sm font-bold leading-5 text-blue-700",
+                                                                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
+                                                                selected
+                                                                  ? "bg-white shadow"
+                                                                  : "text-slate-400 hover:bg-white/[0.12] hover:text-white"
+                                                              )
+                                                            }
+                                                          >
+                                                            {board}
+                                                          </Tab>
+                                                        )
+                                                      )}
+                                                    </>
+                                                  ))}
+                                                </Tab.List>
+                                                <Tab.Panels className="mt-2">
+                                                  {/* Paper / Unit */}
 
-                                  <a
-                                    href="https://papers.gceguide.com/A%20Levels/Biology%20(9700)/2022/9700_m22_er.pdf"
-                                    target="_blank"
-                                    className={classNames(
-                                      "absolute inset-0 rounded-md",
-                                      "ring-blue-400 focus:z-10 focus:outline-none focus:ring-2"
-                                    )}
-                                  />
-                                </li>
-                              ))}
-                            </ul>
-                          </Tab.Panel>
-                        ))}
-                      </Tab.Panels>
-                    </Tab.Group>
+                                                  {boards.map((board) => (
+                                                    <>
+                                                      {Object.values(board).map(
+                                                        (board, idx) => (
+                                                          <Tab.Panel key={idx}>
+                                                            <Tab.Group>
+                                                              <Tab.List className="flex space-x-1  rounded-xl bg-blue-900/20 p-1">
+                                                                {board.map(
+                                                                  (board) => (
+                                                                    <>
+                                                                      {Object.keys(
+                                                                        board
+                                                                      ).map(
+                                                                        (
+                                                                          papers
+                                                                        ) => (
+                                                                          <Tab
+                                                                            key={
+                                                                              papers
+                                                                            }
+                                                                            className={({
+                                                                              selected,
+                                                                            }) =>
+                                                                              classNames(
+                                                                                "w-full rounded-lg py-2.5 text-sm font-bold leading-5 text-blue-700",
+                                                                                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
+                                                                                selected
+                                                                                  ? "bg-white shadow"
+                                                                                  : "text-slate-400 hover:bg-white/[0.12] hover:text-white"
+                                                                              )
+                                                                            }
+                                                                          >
+                                                                            {
+                                                                              papers
+                                                                            }
+                                                                          </Tab>
+                                                                        )
+                                                                      )}
+                                                                    </>
+                                                                  )
+                                                                )}
+                                                              </Tab.List>
+                                                              <Tab.Panels className="mt-2">
+                                                                {/* Year */}
+
+                                                                {board.map(
+                                                                  (board) => (
+                                                                    <>
+                                                                      {Object.values(
+                                                                        board
+                                                                      ).map(
+                                                                        (
+                                                                          years,
+                                                                          idx
+                                                                        ) => (
+                                                                          <Tab.Panel
+                                                                            key={
+                                                                              idx
+                                                                            }
+                                                                          >
+                                                                            <Tab.Group>
+                                                                              <Tab.List className="flex space-x-1  rounded-xl bg-blue-900/20 p-1">
+                                                                                {years.map(
+                                                                                  (
+                                                                                    year
+                                                                                  ) => (
+                                                                                    <>
+                                                                                      {Object.keys(
+                                                                                        year
+                                                                                      ).map(
+                                                                                        (
+                                                                                          year
+                                                                                        ) => (
+                                                                                          <Tab
+                                                                                            key={
+                                                                                              year
+                                                                                            }
+                                                                                            className={({
+                                                                                              selected,
+                                                                                            }) =>
+                                                                                              classNames(
+                                                                                                "w-full rounded-lg py-2.5 text-sm font-bold leading-5 text-blue-700",
+                                                                                                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2",
+                                                                                                selected
+                                                                                                  ? "bg-white shadow"
+                                                                                                  : "text-slate-400 hover:bg-white/[0.12] hover:text-white"
+                                                                                              )
+                                                                                            }
+                                                                                          >
+                                                                                            {
+                                                                                              year
+                                                                                            }
+                                                                                          </Tab>
+                                                                                        )
+                                                                                      )}
+                                                                                    </>
+                                                                                  )
+                                                                                )}
+                                                                              </Tab.List>
+                                                                              <Tab.Panels className="mt-2">
+                                                                                {/* Result */}
+
+                                                                                {years.map(
+                                                                                  (
+                                                                                    year
+                                                                                  ) => (
+                                                                                    <>
+                                                                                      {Object.values(
+                                                                                        year
+                                                                                      ).map(
+                                                                                        (
+                                                                                          items,
+                                                                                          idx
+                                                                                        ) => (
+                                                                                          <Tab.Panel
+                                                                                            key={
+                                                                                              idx
+                                                                                            }
+                                                                                          >
+                                                                                        
+                                                                                                {items.map(
+                                                                                                  (
+                                                                                                    item
+                                                                                                  ) => (
+                                                                                                    <>
+                                                                                                     
+                                                                                                          <div className="p-4 m-2 border border-slate-300 inline-block">
+                                                                                                          {
+                                                                                                            item.name
+                                                                                                          }
+                                                                                                          <a
+                                                                                                            className="ml-4"
+                                                                                                            href={`./paper/${item.name}.pdf`}
+                                                                                                            target="_blank"
+                                                                                                          >
+                                                                                                            <FaFileDownload className="inline text-purple-500 font-bold text-2xl" />
+                                                                                                          </a>
+                                                                                                        </div>
+                                                                                                       
+                                                                                                    </>
+                                                                                                  )
+                                                                                                )}
+                                                                                          
+                                                                                          </Tab.Panel>
+                                                                                        )
+                                                                                      )}
+                                                                                    </>
+                                                                                  )
+                                                                                )}
+                                                                              </Tab.Panels>
+                                                                            </Tab.Group>
+                                                                          </Tab.Panel>
+                                                                        )
+                                                                      )}
+                                                                    </>
+                                                                  )
+                                                                )}
+                                                              </Tab.Panels>
+                                                            </Tab.Group>
+                                                          </Tab.Panel>
+                                                        )
+                                                      )}
+                                                    </>
+                                                  ))}
+                                                </Tab.Panels>
+                                              </Tab.Group>
+                                            </Tab.Panel>
+                                          )
+                                        )}
+                                      </>
+                                    ))}
+                                  </Tab.Panels>
+                                </Tab.Group>
+                              </Tab.Panel>
+                            ))}
+                          </Tab.Panels>
+                        </Tab.Group>
+                      </div>
+                    </div>
+                    {/* Categories */}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

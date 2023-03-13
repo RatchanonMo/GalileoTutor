@@ -6,31 +6,24 @@ import logo from "../img/small.png";
 import { Outlet, Link } from "react-router-dom";
 
 const item = [
-  { id: "0", name: "Home", href: "/", status: "current" },
-  { id: "1", name: "Our Course", href: "/", status: "normal" },
-  { id: "2", name: "Our Teams", href: "/our-team", status: "normal" },
-  { id: "3", name: "About us", href: "/", status: "normal" },
-  { id: "4", name: "Blog & News", href: "/", status: "normal" },
-  { id: "5", name: "Student Tools", href: "/student-tools", status: "normal" },
-  { id: "6", name: "Our Success", href: "/", status: "normal" },
-  { id: "7", name: "Contact us", href: "/contact-us", status: "normal" },
+  { name: "Home", href: "/", status: "current" },
+  { name: "Our Course", href: "/course", status: "normal" },
+  { name: "Teaching Example", href: "/teaching-example", status: "normal" },
+  { name: "Our Teams", href: "/our-team", status: "normal" },
+  { name: "About us", href: "/about-us", status: "normal" },
+  { name: "Blog & News", href: "/blogs", status: "normal" },
+  { name: "Student Tools", href: "/student-tools", status: "normal" },
+  { name: "Our Success", href: "/success", status: "normal" },
+  { name: "Contact us", href: "/contact-us", status: "normal" },
 ];
 
 export default function Navbar(props) {
-  let [isOpenTeam, setIsOpenTeam] = useState(false);
 
-  function closeModal() {
-    setIsOpenTeam(false);
-  }
-
-  function openModalTeam() {
-    setIsOpenTeam(true);
-  }
 
   return (
     <div>
       <nav id="bg">
-        <div>
+        <div className="flex items-center">
           <img src={logo} />
           {/* <h1 className="logo">กาลิเลโอ<br/>ติวเตอร์.</h1> */}
         </div>
@@ -40,15 +33,14 @@ export default function Navbar(props) {
               {item.modal ? (
                 <a
                   className={item.status}
-                  id="blur"
+                  id="item"
                   href="#"
-                  onClick={openModalTeam}
                 >
                   <span>{item.name}</span>
                 </a>
               ) : (
                 <Link to={item.href}>
-                  <a className={item.status} href="#">
+                  <a className={item.status}  href="#">
                     <span>{item.name}</span>
                   </a>
                 </Link>

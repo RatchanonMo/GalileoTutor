@@ -53,8 +53,10 @@ export default function OurTeam() {
     <div>
       <Navbar current="/contact-us" />
       <div className="text-center mt-32 ">
+        <p className=" py-2 px-3 border border-black rounded-full inline">
+          ทีมงานของกาลิเลโอติวเตอร์
+        </p>
         <h1 className="black text-9xl  ">Our Team</h1>
-        <p className="text-xl">ทีมงานของกาลิเลโอติวเตอร์</p>
       </div>
       <div
         className="container mx-auto bg-white my-10 py-20 "
@@ -77,23 +79,21 @@ export default function OurTeam() {
                 {people.role}
               </h3>
               <div className="p-4">
-              <a
-                href="https://www.facebook.com/GalileoTutor"
-                target="_blank"
-                rel="noreferrer"
-                
-              >
-                <FaFacebook className="inline text-xl m-1"/>
-              </a>
-              <a
-                href="https://www.instagram.com/galileo_tutor/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FaInstagram className="inline text-xl m-1"/>
-              </a>
+                <a
+                  href="https://www.facebook.com/GalileoTutor"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaFacebook className="inline text-xl m-1" />
+                </a>
+                <a
+                  href="https://www.instagram.com/galileo_tutor/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaInstagram className="inline text-xl m-1" />
+                </a>
               </div>
-             
             </div>
           ))}
         </div>

@@ -142,10 +142,10 @@ export default function App() {
       <main className="overflow-hidden " id="section3">
         <div className="grid grid-cols-2 max-w-screen-lg m-auto py-20 ">
           <div>
-            <p className="py-2 px-3 border border-black rounded-full inline">
-              กาลิเลโอติวเตอร์คืออะไร
+            <p className=" py-2 px-3 border border-black rounded-full inline">
+              พวกเราคือใคร
             </p>
-            <h1 className="text-9xl black my-4">WHAT ARE WE ?</h1>
+            <h1 className="text-9xl black my-4">WHO ARE WE ?</h1>
           </div>
           <div>
             <p className="text-lg mb-5">

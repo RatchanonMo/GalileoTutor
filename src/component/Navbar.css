@@ -10,8 +10,8 @@ nav {
   padding: 45px;
 
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
@@ -54,4 +54,13 @@ nav img {
   padding: 1px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+.normal{
+  transition: 0.2s;
+}
+.normal:hover{
+  background-color: #dbd2e2a2;
+  border-radius: 100px;
+  padding: 2px 9px;
+  font-weight: bold;
 }

@@ -10,8 +10,10 @@ export default function ContactUs() {
     <div>
       <Navbar current="/contact-us" />
       <div className="text-center mt-32 ">
+      <p className=" py-2 px-3 border border-black rounded-full inline">
+      ช่องทางการติดต่อพวกเรา
+        </p>
         <h1 className="black text-9xl  ">Contact Us</h1>
-        <p className="text-xl">ช่องทางการติดต่อเรา</p>
       </div>
       <div
         className="container mx-auto bg-white my-10 py-20 drop-shadow-md "
